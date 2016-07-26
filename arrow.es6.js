@@ -1,5 +1,5 @@
 // 매개변수가 하나인 경우에는 괄호 생략 가능
-// 반환되는 객체를 곧바로 사용 가능
+// 반환되는 객체를 곧바로 사용 가능(return 생략)
 let f1 = a => a+1;
 console.log( f1(1) );
 
@@ -17,3 +17,12 @@ let b = a.map( v => v+1 );
 console.log( b );
 
 // lexical this
+function Player() {
+    this.level = 1;
+    setInterval( ()=>{
+        this.level+=1;
+    }, 1000);
+}
+let p = new Player();
+setTimeout( ()=>{ console.log(p) }, 2000);
+
