@@ -25,4 +25,3 @@ function Player() {
 }
 let p = new Player();
 setTimeout( ()=>{ console.log(p) }, 2000);
-
